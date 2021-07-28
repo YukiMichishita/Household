@@ -1,0 +1,1221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createSpending Display renders createSpending 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <form
+          class="makeStyles-form-1"
+          novalidate=""
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-accountDate-2"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink="true"
+              for="account_date"
+              id="account_date-label"
+            >
+              会計日
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input"
+                id="account_date"
+                type="date"
+                value="2021-05-25"
+              />
+            </div>
+          </div>
+          <div>
+            <div>
+              <div
+                class="MuiFormControl-root makeStyles-selectCategory-7"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink="false"
+                  for="category-select"
+                >
+                  カテゴリ
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <div
+                    aria-haspopup="listbox"
+                    aria-labelledby="category"
+                    class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                    id="category"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    class="MuiSelect-nativeInput"
+                    tabindex="-1"
+                    value=""
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSelect-icon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="MuiFormControl-root makeStyles-selectCategory-7"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink="false"
+                  for="subcategory-select"
+                >
+                  サブカテゴリ
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <div
+                    aria-haspopup="listbox"
+                    aria-labelledby="subcategory"
+                    class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                    id="subcategory"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    class="MuiSelect-nativeInput"
+                    name="subcategory"
+                    tabindex="-1"
+                    value=""
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSelect-icon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button
+              aria-label="add"
+              class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiFab-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div>
+            <button
+              aria-label="add"
+              class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiFab-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-amount-3"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink="true"
+              for="amount"
+              id="amount-label"
+            >
+              金額
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input"
+                id="amount"
+                inputmode="numeric"
+                name="numberformat"
+                type="text"
+                value="¥0"
+              />
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-comment-4"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+              for="comment"
+              id="comment-label"
+            >
+              コメント
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+            >
+              <textarea
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+                id="comment"
+                rows="4"
+              />
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-save-5"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              保存
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <form
+        class="makeStyles-form-1"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-accountDate-2"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink="true"
+            for="account_date"
+            id="account_date-label"
+          >
+            会計日
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="account_date"
+              type="date"
+              value="2021-05-25"
+            />
+          </div>
+        </div>
+        <div>
+          <div>
+            <div
+              class="MuiFormControl-root makeStyles-selectCategory-7"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                data-shrink="false"
+                for="category-select"
+              >
+                カテゴリ
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="category"
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="category"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span>
+                    ​
+                  </span>
+                </div>
+                <input
+                  aria-hidden="true"
+                  class="MuiSelect-nativeInput"
+                  tabindex="-1"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="MuiFormControl-root makeStyles-selectCategory-7"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                data-shrink="false"
+                for="subcategory-select"
+              >
+                サブカテゴリ
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="subcategory"
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="subcategory"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span>
+                    ​
+                  </span>
+                </div>
+                <input
+                  aria-hidden="true"
+                  class="MuiSelect-nativeInput"
+                  name="subcategory"
+                  tabindex="-1"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            aria-label="add"
+            class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiFab-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div>
+          <button
+            aria-label="add"
+            class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiFab-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-amount-3"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink="true"
+            for="amount"
+            id="amount-label"
+          >
+            金額
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="amount"
+              inputmode="numeric"
+              name="numberformat"
+              type="text"
+              value="¥0"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-comment-4"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="comment"
+            id="comment-label"
+          >
+            コメント
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+          >
+            <textarea
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+              id="comment"
+              rows="4"
+            />
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-save-5"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            保存
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`createSpending Display renders createSpending 2`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    style="padding-right: 0px; overflow: hidden;"
+  >
+    <div
+      aria-hidden="true"
+    >
+      <div>
+        <form
+          class="makeStyles-form-1"
+          novalidate=""
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-accountDate-2"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink="true"
+              for="account_date"
+              id="account_date-label"
+            >
+              会計日
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input"
+                id="account_date"
+                type="date"
+                value="2021-05-25"
+              />
+            </div>
+          </div>
+          <div>
+            <div>
+              <div
+                class="MuiFormControl-root makeStyles-selectCategory-7"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                  data-shrink="true"
+                  for="category-select"
+                >
+                  カテゴリ
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <div
+                    aria-haspopup="listbox"
+                    aria-labelledby="category"
+                    class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                    id="category"
+                    role="button"
+                    tabindex="0"
+                  >
+                    食費
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    class="MuiSelect-nativeInput"
+                    tabindex="-1"
+                    value="1f80f64d-dea1-4d35-8fa2-a03e057f1ef4"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSelect-icon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="MuiFormControl-root makeStyles-selectCategory-7"
+              >
+                <label
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-focused Mui-focused"
+                  data-shrink="true"
+                  for="subcategory-select"
+                >
+                  サブカテゴリ
+                </label>
+                <div
+                  class="MuiInputBase-root MuiInput-root MuiInput-underline Mui-focused Mui-focused MuiInputBase-formControl MuiInput-formControl"
+                >
+                  <div
+                    aria-expanded="true"
+                    aria-haspopup="listbox"
+                    aria-labelledby="subcategory"
+                    class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                    id="subcategory"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <span>
+                      ​
+                    </span>
+                  </div>
+                  <input
+                    aria-hidden="true"
+                    class="MuiSelect-nativeInput"
+                    name="subcategory"
+                    tabindex="-1"
+                    value=""
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOpen"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button
+              aria-label="add"
+              class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiFab-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div>
+            <button
+              aria-label="add"
+              class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiFab-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-amount-3"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+              data-shrink="true"
+              for="amount"
+              id="amount-label"
+            >
+              金額
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+            >
+              <input
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input"
+                id="amount"
+                inputmode="numeric"
+                name="numberformat"
+                type="text"
+                value="¥0"
+              />
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-comment-4"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+              data-shrink="false"
+              for="comment"
+              id="comment-label"
+            >
+              コメント
+            </label>
+            <div
+              class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+            >
+              <textarea
+                aria-invalid="false"
+                class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+                id="comment"
+                rows="4"
+              />
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-save-5"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              保存
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      class="MuiPopover-root"
+      id="menu-"
+      role="presentation"
+      style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px;"
+    >
+      <div
+        data-test="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded"
+        style="opacity: 0; transform: scale(0.75, 0.5625); min-width: 0; transition: opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; top: 16px; left: 16px; transform-origin: -16px -16px;"
+        tabindex="-1"
+      >
+        <ul
+          class="MuiList-root MuiMenu-list MuiList-padding"
+          role="listbox"
+          tabindex="-1"
+        >
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            data-value=""
+            role="option"
+            tabindex="-1"
+          >
+            
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            aria-selected="true"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root Mui-selected MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button Mui-selected"
+            data-value="1f80f64d-dea1-4d35-8fa2-a03e057f1ef4"
+            role="option"
+            tabindex="0"
+          >
+            食費
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            data-value="3066c32e-345f-4576-b3ae-03d0b99d8989"
+            role="option"
+            tabindex="-1"
+          >
+            被服費
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            data-value="3692fe6d-fc51-46ac-b57a-77ca4b25ae1a"
+            role="option"
+            tabindex="-1"
+          >
+            娯楽費
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button"
+            data-value="5a806d52-6f5f-4c02-91e2-9e8ff1a17448"
+            role="option"
+            tabindex="-1"
+          >
+            日用品費
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        data-test="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+    <div
+      class="MuiPopover-root"
+      id="menu-subcategory"
+      role="presentation"
+      style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px;"
+    >
+      <div
+        aria-hidden="true"
+        style="z-index: -1; position: fixed; right: 0px; bottom: 0px; top: 0px; left: 0px; background-color: transparent;"
+      />
+      <div
+        data-test="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded"
+        style="opacity: 1; transform: scale(1, 1); min-width: 0; transition: opacity 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 0ms cubic-bezier(0.4, 0, 0.2, 1) 0ms; top: 16px; left: 16px; transform-origin: -16px -16px;"
+        tabindex="-1"
+      >
+        <ul
+          class="MuiList-root MuiMenu-list MuiList-padding"
+          role="listbox"
+          tabindex="-1"
+        >
+          <li
+            aria-disabled="false"
+            aria-selected="true"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root Mui-selected MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button Mui-selected"
+            data-value=""
+            role="option"
+            tabindex="-1"
+          >
+            
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+          <li
+            aria-disabled="false"
+            aria-selected="true"
+            class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root Mui-selected MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button Mui-selected"
+            data-value=""
+            role="option"
+            tabindex="0"
+          >
+            
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </li>
+        </ul>
+      </div>
+      <div
+        data-test="sentinelEnd"
+        tabindex="0"
+      />
+    </div>
+  </body>,
+  "container": <div
+    aria-hidden="true"
+  >
+    <div>
+      <form
+        class="makeStyles-form-1"
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-accountDate-2"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink="true"
+            for="account_date"
+            id="account_date-label"
+          >
+            会計日
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="account_date"
+              type="date"
+              value="2021-05-25"
+            />
+          </div>
+        </div>
+        <div>
+          <div>
+            <div
+              class="MuiFormControl-root makeStyles-selectCategory-7"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+                data-shrink="true"
+                for="category-select"
+              >
+                カテゴリ
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+              >
+                <div
+                  aria-haspopup="listbox"
+                  aria-labelledby="category"
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="category"
+                  role="button"
+                  tabindex="0"
+                >
+                  食費
+                </div>
+                <input
+                  aria-hidden="true"
+                  class="MuiSelect-nativeInput"
+                  tabindex="-1"
+                  value="1f80f64d-dea1-4d35-8fa2-a03e057f1ef4"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="MuiFormControl-root makeStyles-selectCategory-7"
+            >
+              <label
+                class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink Mui-focused Mui-focused"
+                data-shrink="true"
+                for="subcategory-select"
+              >
+                サブカテゴリ
+              </label>
+              <div
+                class="MuiInputBase-root MuiInput-root MuiInput-underline Mui-focused Mui-focused MuiInputBase-formControl MuiInput-formControl"
+              >
+                <div
+                  aria-expanded="true"
+                  aria-haspopup="listbox"
+                  aria-labelledby="subcategory"
+                  class="MuiSelect-root MuiSelect-select MuiSelect-selectMenu MuiInputBase-input MuiInput-input"
+                  id="subcategory"
+                  role="button"
+                  tabindex="0"
+                >
+                  <span>
+                    ​
+                  </span>
+                </div>
+                <input
+                  aria-hidden="true"
+                  class="MuiSelect-nativeInput"
+                  name="subcategory"
+                  tabindex="-1"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSelect-icon MuiSelect-iconOpen"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button
+            aria-label="add"
+            class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiFab-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div>
+          <button
+            aria-label="add"
+            class="MuiButtonBase-root MuiFab-root makeStyles-addCategoryIcon-13 MuiFab-sizeSmall"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiFab-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-amount-3"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink="true"
+            for="amount"
+            id="amount-label"
+          >
+            金額
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="amount"
+              inputmode="numeric"
+              name="numberformat"
+              type="text"
+              value="¥0"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-comment-4"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+            data-shrink="false"
+            for="comment"
+            id="comment-label"
+          >
+            コメント
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline"
+          >
+            <textarea
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+              id="comment"
+              rows="4"
+            />
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-save-5"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            保存
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,0 +1,889 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpendingPerMonth Display renders SpendingPerMonth 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form>
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-selectMonthText-3"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink="true"
+            for="AccountYearMonth"
+            id="AccountYearMonth-label"
+          >
+            会計月
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="AccountYearMonth"
+              type="month"
+              value="2021-05"
+            />
+          </div>
+        </div>
+      </form>
+      <table
+        aria-label="customized table"
+        class="MuiTable-root makeStyles-table-4"
+      >
+        <thead
+          class="MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 MuiTableRow-head"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head makeStyles-head-5"
+              scope="col"
+            >
+              カテゴリ
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head makeStyles-head-5 MuiTableCell-alignRight"
+              scope="col"
+            >
+              金額
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+              role="cell"
+              scope="row"
+            >
+              食費
+            </th>
+            <td
+              class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+            >
+              ¥17,200
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root makeStyles-row-8"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+              colspan="6"
+              style="padding-bottom: 0px; padding-top: 0px;"
+            />
+          </tr>
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+              role="cell"
+              scope="row"
+            >
+              日用品費
+            </th>
+            <td
+              class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+            >
+              ¥1,800
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root makeStyles-row-8"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+              colspan="6"
+              style="padding-bottom: 0px; padding-top: 0px;"
+            />
+          </tr>
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+              role="cell"
+              scope="row"
+            >
+              被服費
+            </th>
+            <td
+              class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+            >
+              ¥20,000
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root makeStyles-row-8"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+              colspan="6"
+              style="padding-bottom: 0px; padding-top: 0px;"
+            />
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>,
+  "container": <div>
+    <form>
+      <div
+        class="MuiFormControl-root MuiTextField-root makeStyles-selectMonthText-3"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink="true"
+          for="AccountYearMonth"
+          id="AccountYearMonth-label"
+        >
+          会計月
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            id="AccountYearMonth"
+            type="month"
+            value="2021-05"
+          />
+        </div>
+      </div>
+    </form>
+    <table
+      aria-label="customized table"
+      class="MuiTable-root makeStyles-table-4"
+    >
+      <thead
+        class="MuiTableHead-root"
+      >
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 MuiTableRow-head"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-head makeStyles-head-5"
+            scope="col"
+          >
+            カテゴリ
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head makeStyles-head-5 MuiTableCell-alignRight"
+            scope="col"
+          >
+            金額
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+            role="cell"
+            scope="row"
+          >
+            食費
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+          >
+            ¥17,200
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root makeStyles-row-8"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body"
+            colspan="6"
+            style="padding-bottom: 0px; padding-top: 0px;"
+          />
+        </tr>
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+            role="cell"
+            scope="row"
+          >
+            日用品費
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+          >
+            ¥1,800
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root makeStyles-row-8"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body"
+            colspan="6"
+            style="padding-bottom: 0px; padding-top: 0px;"
+          />
+        </tr>
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+            role="cell"
+            scope="row"
+          >
+            被服費
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+          >
+            ¥20,000
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root makeStyles-row-8"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body"
+            colspan="6"
+            style="padding-bottom: 0px; padding-top: 0px;"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`SpendingPerMonth Display renders SpendingPerMonth 2`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form>
+        <div
+          class="MuiFormControl-root MuiTextField-root makeStyles-selectMonthText-3"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+            data-shrink="true"
+            for="AccountYearMonth"
+            id="AccountYearMonth-label"
+          >
+            会計月
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input"
+              id="AccountYearMonth"
+              type="month"
+              value="2021-05"
+            />
+          </div>
+        </div>
+      </form>
+      <table
+        aria-label="customized table"
+        class="MuiTable-root makeStyles-table-4"
+      >
+        <thead
+          class="MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 MuiTableRow-head"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head makeStyles-head-5"
+              scope="col"
+            >
+              カテゴリ
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head makeStyles-head-5 MuiTableCell-alignRight"
+              scope="col"
+            >
+              金額
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root"
+        >
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+              role="cell"
+              scope="row"
+            >
+              食費
+            </th>
+            <td
+              class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+            >
+              ¥17,200
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root makeStyles-row-8"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+              colspan="6"
+              style="padding-bottom: 0px; padding-top: 0px;"
+            >
+              <div
+                class="MuiCollapse-container"
+                style="min-height: 0px; height: 0px; transition-duration: 0ms;"
+              >
+                <div
+                  class="MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner"
+                  >
+                    <div
+                      class="MuiBox-root MuiBox-root-13"
+                    >
+                      <table
+                        aria-label="purchases"
+                        class="MuiTable-root"
+                      >
+                        <tbody
+                          class="MuiTableBody-root"
+                        >
+                          <tr
+                            class="MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                              role="cell"
+                              scope="row"
+                            >
+                              2021-05-03
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                            >
+                              ¥200
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                              role="cell"
+                              scope="row"
+                            >
+                              2021-05-04
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                            >
+                              ¥6,300
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                              role="cell"
+                              scope="row"
+                            >
+                              2021-05-05
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                            >
+                              ¥1,200
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                              role="cell"
+                              scope="row"
+                            >
+                              2021-05-08
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                            >
+                              ¥3,000
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                              role="cell"
+                              scope="row"
+                            >
+                              2021-05-08
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                            >
+                              ¥1,200
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                              role="cell"
+                              scope="row"
+                            >
+                              2021-05-10
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                            >
+                              ¥5,300
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+              role="cell"
+              scope="row"
+            >
+              日用品費
+            </th>
+            <td
+              class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+            >
+              ¥1,800
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root makeStyles-row-8"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+              colspan="6"
+              style="padding-bottom: 0px; padding-top: 0px;"
+            />
+          </tr>
+          <tr
+            class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+              role="cell"
+              scope="row"
+            >
+              被服費
+            </th>
+            <td
+              class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+            >
+              ¥20,000
+            </td>
+          </tr>
+          <tr
+            class="MuiTableRow-root makeStyles-row-8"
+          >
+            <td
+              class="MuiTableCell-root MuiTableCell-body"
+              colspan="6"
+              style="padding-bottom: 0px; padding-top: 0px;"
+            />
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>,
+  "container": <div>
+    <form>
+      <div
+        class="MuiFormControl-root MuiTextField-root makeStyles-selectMonthText-3"
+      >
+        <label
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled"
+          data-shrink="true"
+          for="AccountYearMonth"
+          id="AccountYearMonth-label"
+        >
+          会計月
+        </label>
+        <div
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-formControl MuiInput-formControl"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input MuiInput-input"
+            id="AccountYearMonth"
+            type="month"
+            value="2021-05"
+          />
+        </div>
+      </div>
+    </form>
+    <table
+      aria-label="customized table"
+      class="MuiTable-root makeStyles-table-4"
+    >
+      <thead
+        class="MuiTableHead-root"
+      >
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 MuiTableRow-head"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-head makeStyles-head-5"
+            scope="col"
+          >
+            カテゴリ
+          </th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head makeStyles-head-5 MuiTableCell-alignRight"
+            scope="col"
+          >
+            金額
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="MuiTableBody-root"
+      >
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+            role="cell"
+            scope="row"
+          >
+            食費
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+          >
+            ¥17,200
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root makeStyles-row-8"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body"
+            colspan="6"
+            style="padding-bottom: 0px; padding-top: 0px;"
+          >
+            <div
+              class="MuiCollapse-container"
+              style="min-height: 0px; height: 0px; transition-duration: 0ms;"
+            >
+              <div
+                class="MuiCollapse-wrapper"
+              >
+                <div
+                  class="MuiCollapse-wrapperInner"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root-13"
+                  >
+                    <table
+                      aria-label="purchases"
+                      class="MuiTable-root"
+                    >
+                      <tbody
+                        class="MuiTableBody-root"
+                      >
+                        <tr
+                          class="MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                            role="cell"
+                            scope="row"
+                          >
+                            2021-05-03
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                          >
+                            ¥200
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                            role="cell"
+                            scope="row"
+                          >
+                            2021-05-04
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                          >
+                            ¥6,300
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                            role="cell"
+                            scope="row"
+                          >
+                            2021-05-05
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                          >
+                            ¥1,200
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                            role="cell"
+                            scope="row"
+                          >
+                            2021-05-08
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                          >
+                            ¥3,000
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                            role="cell"
+                            scope="row"
+                          >
+                            2021-05-08
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                          >
+                            ¥1,200
+                          </td>
+                        </tr>
+                        <tr
+                          class="MuiTableRow-root"
+                        >
+                          <th
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-sizeSmall"
+                            role="cell"
+                            scope="row"
+                          >
+                            2021-05-10
+                          </th>
+                          <td
+                            class="MuiTableCell-root MuiTableCell-body makeStyles-tableCell-9 MuiTableCell-alignRight MuiTableCell-sizeSmall"
+                          >
+                            ¥5,300
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+            role="cell"
+            scope="row"
+          >
+            日用品費
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+          >
+            ¥1,800
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root makeStyles-row-8"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body"
+            colspan="6"
+            style="padding-bottom: 0px; padding-top: 0px;"
+          />
+        </tr>
+        <tr
+          class="MuiTableRow-root WithStyles(ForwardRef(TableRow))-root-6 makeStyles-row-8"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-body makeStyles-category-11"
+            role="cell"
+            scope="row"
+          >
+            被服費
+          </th>
+          <td
+            class="MuiTableCell-root MuiTableCell-body makeStyles-body-12 MuiTableCell-alignRight"
+          >
+            ¥20,000
+          </td>
+        </tr>
+        <tr
+          class="MuiTableRow-root makeStyles-row-8"
+        >
+          <td
+            class="MuiTableCell-root MuiTableCell-body"
+            colspan="6"
+            style="padding-bottom: 0px; padding-top: 0px;"
+          />
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
