@@ -1,0 +1,64 @@
+version: "3"
+
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: HouseholdProject
+      MYSQL_USER: yuki
+      MYSQL_PASSWORD: zoids036
+      MYSQL_ROOT_HOST: "%"
+      BIND-ADDRESS: 0.0.0.0
+      TZ: "Asia/Tokyo"
+      command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    ports:
+      - 3306:3306
+    networks:
+      - household
+    volumes:
+      - build_folder/mysql
+
+  backend:
+    build:
+      context: ./backend
+      args:
+        DJANGO_ALLOWED_HOSTS: "*"
+        DJANGO_SECRET_KEY: "9dsa&4=(oul@r_b)!0z^rrqbb44hs_v=i5+7ag7r)izub4=t+k"
+        DJANGO_CORS_ORIGIN_WHITELIST: "*"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - household
+    links:
+      - db
+    tty: true
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        API_URL: "http://192.168.11.4:8000"
+    volumes:
+      - build_folder:/frontend/build
+    tty: true
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:8080
+    volumes:
+      - ./webserver/nginx-proxy.conf:/etc/nginx/conf.d/default.conf:ro
+      - build_folder:/var/www/frontend
+    depends_on:
+      - db
+      - backend
+      - frontend
+    tty: true
+volumes:
+  build_folder:
+networks:
+  household:
+    external: true

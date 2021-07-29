@@ -11,5 +11,3 @@
 bower_components
 
 .DS_Store
-Dockerfile
-docker-compose.yml
