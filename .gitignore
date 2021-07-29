@@ -3,9 +3,13 @@
 *.pyc
 /backend/HouseholdProject/AccountBookapp/__pycache__/
 /backend/HouseholdProject/AccountBookapp/db-volumes/
-.DS_Store
+
 #frontend
 **/*.backup.*
 **/*.back.*
 /frontend/node_modules/
 bower_components
+
+.DS_Store
+Dockerfile
+docker-compose.yml

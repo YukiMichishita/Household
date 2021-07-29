@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9dsa&4=(oul@r_b)!0z^rrqbb44hs_v=i5+7ag7r)izub4=t+k'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 
 # Application definition
@@ -89,10 +90,7 @@ JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    # 'http://192.168.11.4:3000',
-]
+CORS_ORIGIN_WHITELIST = os.environ.get("CORS_ORIGIN_WHITELIST").split(" ")
 
 ROOT_URLCONF = 'HouseholdProject.urls'
 
@@ -124,7 +122,7 @@ DATABASES = {
         'NAME': 'HouseholdProject',
         'USER': 'yuki',
         'PASSWORD': 'zoids036',
-        'HOST': '127.0.0.1',
+        'HOST': 'household_db_1',
         'PORT': '3306',
     }
 }
