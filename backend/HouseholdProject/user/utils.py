@@ -13,7 +13,7 @@ def jwt_get_username_from_payload_handler(payload):
 def jwt_decode_token(token):
     header = jwt.get_unverified_header(token)
     jwks = requests.get(
-        'https://{}/.well-known/jwks.json'.format('dev-yuki.jp.auth0.com')).json()
+        'https://{}/.well-known/jwks.json'.format('production-yuki.jp.auth0.com')).json()
     public_key = None
     for jwk in jwks['keys']:
         if jwk['kid'] == header['kid']:
@@ -22,5 +22,10 @@ def jwt_decode_token(token):
     if public_key is None:
         raise Exception('Public key not found.')
 
-    issuer = 'https://{}/'.format('dev-yuki.jp.auth0.com')
-    return jwt.decode(token, public_key, audience='https://accountbook/api/user', issuer=issuer, algorithms=['RS256'])
+    issuer = 'https://{}/'.format('production-yuki.jp.auth0.com')
+    return jwt.decode(
+        token,
+        public_key,
+        audience='https://accountbook/api/user',
+        issuer=issuer,
+        algorithms=['RS256'])

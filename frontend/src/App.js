@@ -18,8 +18,8 @@ function App() {
   return (
     <Paper className={classes.root}>
       <Auth0Provider
-        domain={'dev-yuki.jp.auth0.com'}
-        clientId={'qBgKdbrCXfYsAVCNCHnpWeugj3fZHsNR'}
+        domain={'production-yuki.jp.auth0.com'}
+        clientId={'fCDQU2HgvzvjFvT4PvdwJ08VAI6wJA0H'}
         redirectUri={window.location.origin}
       >
         <Provider store={store}>

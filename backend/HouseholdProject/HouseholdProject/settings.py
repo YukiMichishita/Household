@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "9dsa&4=(oul@r_b)!0z^rrqbb44hs_v=i5+7ag7r)izub4=t+k"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+ALLOWED_HOSTS = "*"
 
 
 # Application definition
@@ -86,11 +86,11 @@ JWT_AUTH = {
         'user.utils.jwt_decode_token',
     'JWT_ALGORITHM': 'RS256',
     'JWT_AUDIENCE': 'https://accountbook/api/user',
-    'JWT_ISSUER': 'https://dev-yuki.jp.auth0.com/',
+    'JWT_ISSUER': 'https://production-yuki.jp.auth0.com/',
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
 
-CORS_ORIGIN_WHITELIST = os.environ.get("CORS_ORIGIN_WHITELIST").split(" ")
+CORS_ORIGIN_WHITELIST = ['http://192.168.11.4:80']
 
 ROOT_URLCONF = 'HouseholdProject.urls'
 

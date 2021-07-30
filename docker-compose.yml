@@ -2,7 +2,7 @@ version: "3"
 
 services:
   db:
-    image: mysql
+    image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: HouseholdProject
@@ -17,15 +17,11 @@ services:
     networks:
       - household
     volumes:
-      - build_folder/mysql
+      - mysql_folder:/var/lib/mysql
 
   backend:
     build:
       context: ./backend
-      args:
-        DJANGO_ALLOWED_HOSTS: "*"
-        DJANGO_SECRET_KEY: "9dsa&4=(oul@r_b)!0z^rrqbb44hs_v=i5+7ag7r)izub4=t+k"
-        DJANGO_CORS_ORIGIN_WHITELIST: "*"
     ports:
       - "8000:8000"
     depends_on:
@@ -59,6 +55,7 @@ services:
     tty: true
 volumes:
   build_folder:
+  mysql_folder:
 networks:
   household:
     external: true
