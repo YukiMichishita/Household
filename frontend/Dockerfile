@@ -4,5 +4,7 @@ ARG API_URL
 ENV REACT_APP_HOST_IP_ADDRESS $API_URL
 WORKDIR /frontend
 COPY . /frontend
+RUN npm cache clear
+RUN npm prune
 RUN npm install
 RUN npm run build
