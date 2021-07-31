@@ -9,4 +9,4 @@ RUN apt -y install certbot
 RUN sudo apt-get -y install python-certbot-nginx
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+# ENTRYPOINT ["entrypoint.sh"]

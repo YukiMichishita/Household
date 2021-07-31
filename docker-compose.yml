@@ -46,6 +46,7 @@ services:
       context: ./webserver
     ports:
       - 443:443
+      - 80:80
     volumes:
       - ./webserver/nginx-proxy.conf:/etc/nginx/conf.d/default.conf:ro
       - build_folder:/var/www/frontend
