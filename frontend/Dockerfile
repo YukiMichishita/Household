@@ -5,5 +5,6 @@ ENV REACT_APP_HOST_IP_ADDRESS $API_URL
 RUN mkdir /frontend
 WORKDIR /frontend
 COPY . /frontend
-RUN npm install -g npm@6 
+RUN npm i -g npm@7
+RUN npm install 
 RUN npm run build
