@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 RUN apt update
 RUN apt install sudo 
-
 RUN apt -y install certbot
+RUN sudo apt-get install python-certbot-nginx
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
