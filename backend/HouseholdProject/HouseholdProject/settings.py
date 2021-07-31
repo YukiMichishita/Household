@@ -90,7 +90,7 @@ JWT_AUTH = {
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
 
-CORS_ORIGIN_WHITELIST = ['http://192.168.11.4:80']
+CORS_ORIGIN_WHITELIST = ['http://kakeibo.tk']
 
 ROOT_URLCONF = 'HouseholdProject.urls'
 
