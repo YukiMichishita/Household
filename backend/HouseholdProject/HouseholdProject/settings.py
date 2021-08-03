@@ -160,6 +160,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.1/howto/static-files/
+
+STATIC_URL = '/static/'
+
 # ログ出力先のディレクトリを設定する
 LOG_BASE_DIR = os.path.join("/var", "log", "app")
 LOGGING = {
