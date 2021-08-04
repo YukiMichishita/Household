@@ -1,5 +1,5 @@
-export const rootFrontUrl = 'http://kakeibo.tk/';
-export const rootAPIUrl = 'http://kakeibo.tk:8000/';
+export const rootFrontUrl = 'https://kakeibo.tk/';
+export const rootAPIUrl = 'https://kakeibo.tk/';
 
 // export const rootFrontUrl = 'HTTP://LOCALHOST:3000/';
 // export const rootAPIUrl = 'http://localhost:8000/';
