@@ -11,7 +11,7 @@ export default function AmountForm({ classes, data, setComment }) {
       className={classes.comment}
       value={data.comment}
       onChange={(e) => {
-        dispatch(setComment(e.target.value));
+        setComment(e.target.value);
       }}
     />
   );
