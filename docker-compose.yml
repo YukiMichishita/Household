@@ -2,7 +2,8 @@ version: "3"
 
 services:
   db:
-    image: mysql:5.7
+    build:
+      context: ./mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: HouseholdProject
@@ -35,11 +36,8 @@ services:
   frontend:
     build:
       context: ./frontend
-      args:
-        API_URL: "http://kakeibo.tk:8000"
     volumes:
       - build_folder:/frontend/build
-    tty: true
 
   nginx:
     image: nginx:latest
