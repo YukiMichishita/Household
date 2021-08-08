@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
+env = environ.Env()
+env.read_env('.env')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "9dsa&4=(oul@r_b)!0z^rrqbb44hs_v=i5+7ag7r)izub4=t+k"
+SECRET_KEY = env('SECRET_KEY', str)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = env('DEBUG', bool)
 
-ALLOWED_HOSTS = "*"
+ALLOWED_HOSTS = env('ALLOWED_HOSTS', str)
 
 
 # Application definition
@@ -45,6 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'django_auth0',
+    'sslserver',
 ]
 
 AUTHENTICATION_BACKENDS = [
@@ -86,13 +91,16 @@ JWT_AUTH = {
         'user.utils.jwt_decode_token',
     'JWT_ALGORITHM': 'RS256',
     'JWT_AUDIENCE': 'https://accountbook/api/user',
-    'JWT_ISSUER': 'https://production-yuki.jp.auth0.com/',
+    'JWT_ISSUER': env('JWT_ISSUER', str),
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
 }
 
-CORS_ORIGIN_WHITELIST = ['https://kakeibo.tk']
+CORS_ORIGIN_WHITELIST = [env('CORS_ORIGIN_WHITELIST', str)]
 
 ROOT_URLCONF = 'HouseholdProject.urls'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = False
 
 TEMPLATES = [
     {
@@ -120,9 +128,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'HouseholdProject',
-        'USER': 'yuki',
-        'PASSWORD': 'zoids036',
-        'HOST': 'household_db_1',
+        'USER': env('DB_USER', str),
+        'PASSWORD': env('DB_PASSWORD', str),
+        'HOST': env('DB_HOST', str),
         'PORT': '3306',
     }
 }
@@ -167,7 +175,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # ログ出力先のディレクトリを設定する
-LOG_BASE_DIR = os.path.join("/var", "log", "app")
+LOG_BASE_DIR = os.path.join(env("LOG_DIR", str), "log", "app")
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -194,6 +202,6 @@ LOGGING = {
     },
     "root": {
         "handlers": ["info", "warning", "error"],
-        "level": "INFO",
+        "level": env("LOG_LEVEL", str),
     },
 }
