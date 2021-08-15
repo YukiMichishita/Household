@@ -53,22 +53,20 @@ export default function ExpencesPerMonth({ classes, expences, yearMonth, setYear
         />
       </div>
       {expences.length > 0 ? (
-        <React.Fragment>
-          <div className={classes.tableArea}>
-            <PerMonthTable rows={expences} classes={classes} handleLink={handleLink} />
-          </div>
-          <div className={classes.addCircleIconArea}>
-            <AddCircleIcon
-              className={classes.addCircleIcon}
-              onClick={() => {
-                handleLink('CreateExpences', {});
-              }}
-            />
-          </div>
-        </React.Fragment>
+        <div className={classes.tableArea}>
+          <PerMonthTable rows={expences} classes={classes} handleLink={handleLink} />
+        </div>
       ) : (
         <p className={classes.nodata}>データがありません</p>
       )}
+      <div className={classes.addCircleIconArea}>
+        <AddCircleIcon
+          className={classes.addCircleIcon}
+          onClick={() => {
+            handleLink('CreateExpences', {});
+          }}
+        />
+      </div>
     </React.Fragment>
   );
 }
