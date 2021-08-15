@@ -10,18 +10,16 @@ export default function SubcategoryForm({ id, classes, value, subcategories, set
   }
 
   return (
-    <div>
-      <FormControl className={classes.subcategoryForm}>
-        <InputLabel htmlFor="subcategory-select">サブカテゴリ</InputLabel>
-        <Select id={id} name="subcategory" onChange={(e) => setSubcategory(e.target.value)} value={value}>
-          <MenuItem value={''}>{''}</MenuItem>
-          {subcategories.items.map((subcategory) => (
-            <MenuItem key={subcategory.id} value={subcategory.id}>
-              {subcategory.name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
+    <FormControl className={classes.subcategoryForm}>
+      <InputLabel htmlFor="subcategory-select">サブカテゴリ</InputLabel>
+      <Select id={id} name="subcategory" onChange={(e) => setSubcategory(e.target.value)} value={value}>
+        <MenuItem value={''}>{''}</MenuItem>
+        {subcategories.items.map((subcategory) => (
+          <MenuItem key={subcategory.id} value={subcategory.id}>
+            {subcategory.name}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 }

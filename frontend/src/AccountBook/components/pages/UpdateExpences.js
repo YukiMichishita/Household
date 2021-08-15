@@ -14,29 +14,43 @@ export default function UpdateExpences({ expences, classes, disabled, postExpenc
     return <div>loading...</div>;
   }
   return (
-    <div>
+    <React.Fragment>
       <MessagePopover />
       <form noValidate className={classes.form}>
-        <div className={classes.selectMonth}>
-          <AccountDateForm classes={classes} />
-        </div>
-        <div>
+        {/* 会計月選択 */}
+        <p className={classes.selectMonthParagraph}>
+          <div className={classes.selectMonth}>
+            <AccountDateForm classes={classes} />
+          </div>
+        </p>
+        {/* カテゴリ選択 */}
+        <p className={classes.categoryParagraph}>
           <CategoryForm classes={classes} />
           <AddCategoryDialog classes={classes} />
-        </div>
-        <div>
+        </p>
+        {/* サブカテゴリ選択 */}
+        <p className={classes.subcategoryParagraph}>
           <SubcategoryForm classes={classes} />
           <AddSubcategoryDialog classes={classes} />
-        </div>
-        <AmountForm classes={classes} />
-        <CommentForm classes={classes} />
-        <Button variant="outlined" disabled={disabled} onClick={postExpences} className={classes.save}>
-          保存
-        </Button>
-        <Button variant="outlined" onClick={deleteExpences} className={classes.delete}>
-          削除
-        </Button>
+        </p>
+        {/* 金額 */}
+        <p>
+          <AmountForm classes={classes} />
+        </p>
+        {/* コメント */}
+        <p>
+          <CommentForm classes={classes} />
+        </p>
+        {/* 保存・削除ボタン */}
+        <p className={classes.buttons}>
+          <Button variant="outlined" disabled={disabled} onClick={postExpences} className={classes.save}>
+            保存
+          </Button>
+          <Button variant="outlined" onClick={deleteExpences} className={classes.delete}>
+            削除
+          </Button>
+        </p>
       </form>
-    </div>
+    </React.Fragment>
   );
 }

@@ -8,13 +8,10 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
+  // root: { display: 'flex', justifyContent: 'center', alignItems: 'flex-start', top: 0 },
   messagePopover: {
-    zIndex: '100',
-    potision: 'absolute',
-    bottom: 2000,
-    left: 450,
-    transition: '5s',
+    // transition: '1000s',
   },
 }));
 
@@ -22,7 +19,7 @@ export default function MessagePopover(props) {
   const classes = useStyles();
   const open = useSelector((state) => state.openPop);
   return (
-    <div>
+    <div className={classes.root}>
       <Snackbar className={classes.messagePopover} open={Boolean(open)}>
         <Alert severity="success">{open}</Alert>
       </Snackbar>

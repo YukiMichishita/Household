@@ -29,38 +29,29 @@ export default function AddCategoryDialog({
   deleteCategory,
 }) {
   return (
-    <div>
+    <React.Fragment>
       <Fab size="small" aria-label="add" className={classes.addCategoryIcon} onClick={() => setOpen(true)}>
         <AddIcon />
       </Fab>
-      <Dialog
-        PaperProps={{
-          style: {
-            position: 'relative',
-            bottom: 700,
-            left: -150,
-          },
-        }}
-        open={open}
-        onClose={() => setOpen(false)}
-        aria-labelledby="form-dialog-title"
-      >
+      <Dialog open={open} onClose={() => setOpen(false)} fullWidth>
         <MessagePopover classes={classes} />
-        <AppBar position="static" color="default">
+        <AppBar className={classes.dialogBar} position="static" color="default">
           <Tabs value={value} onChange={() => setValue(1 - value)} indicatorColor="primary">
             <Tab label="追加" className={classes.dialogLabel} />
             <Tab label="編集" className={classes.dialogLabel} />
           </Tabs>
         </AppBar>
+
+        {/* カテゴリ追加タブ */}
         <TabPanel value={value} index={0} className={classes.tabPanel}>
-          <DialogContent>
+          <DialogContent className={classes.editDialogContent}>
             <TextField
-              autoFocus
               margin="dense"
               id="category_name"
               label="カテゴリ名称"
               type="text"
               className={classes.categoryName}
+              inputProps={{ maxLength: 12 }}
             />
           </DialogContent>
           <DialogActions className={classes.dialogAction}>
@@ -72,8 +63,11 @@ export default function AddCategoryDialog({
             </Button>
           </DialogActions>
         </TabPanel>
+
+        {/* カテゴリ編集・削除タブ */}
         <TabPanel value={value} index={1} className={classes.tabPanel}>
           {editing ? (
+            // 編集・削除
             <DialogContent className={classes.editDialogContent}>
               <TextField
                 id="dialogCategoryInput"
@@ -86,8 +80,9 @@ export default function AddCategoryDialog({
               <CloseIcon onClick={() => setEditing(false)} />
             </DialogContent>
           ) : (
+            // 対象の選択
             <DialogContent className={classes.editDialogContent}>
-              <CategoryForm id={'dialogCategory'} classes={classes.dialogCategory} />
+              <CategoryForm id={'dialogCategory'} classes={classes} />
               <EditIcon className={classes.editIcon1} onClick={() => setEditing(true)} />
               <DeleteForeverIcon className={classes.deleteIcon1} onClick={deleteCategory} />
             </DialogContent>
@@ -99,6 +94,6 @@ export default function AddCategoryDialog({
           </DialogActions>
         </TabPanel>
       </Dialog>
-    </div>
+    </React.Fragment>
   );
 }

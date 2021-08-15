@@ -6,7 +6,6 @@ export default function ExpencesChartByCategory({ classes, data }) {
   return (
     <React.Fragment>
       <CategoryMultiSelect classes={classes} />
-
       <ChartByCategory
         datas={data}
         label={{

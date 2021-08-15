@@ -16,6 +16,10 @@ const useAddIncomeCategoryDialog = (props) => {
   const [editing, setEditing] = useState(false);
 
   const register = async (registerFunction, name) => {
+    if (name.length <= 0) {
+      window.alert('名前を入力してください');
+      return;
+    }
     if (categoryNames.includes(name)) {
       window.alert('既に存在するカテゴリ名です');
       return;

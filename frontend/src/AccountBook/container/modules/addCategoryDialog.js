@@ -23,6 +23,7 @@ function AddSpendingCategoryDialog(props) {
     />
   );
 }
+
 function AddIncomeCategoryDialog(props) {
   const [open, setOpen, value, setValue, editing, setEditing, createCategory, updateCategory, deleteCategory] =
     useAddIncomeCategoryDialog(props);

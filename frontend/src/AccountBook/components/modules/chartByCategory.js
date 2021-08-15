@@ -1,10 +1,21 @@
 import React from 'react';
-import { Legend, ReferenceLine, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Brush } from 'recharts';
+import {
+  Legend,
+  ReferenceLine,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Brush,
+  ResponsiveContainer,
+} from 'recharts';
 
 export default function ChartByCategory(props) {
   return (
-    <div className={props.classes.chart}>
-      <LineChart width={950} height={600} data={props.datas} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+    <ResponsiveContainer width="100%" height="50%">
+      <LineChart data={props.datas} margin={{ top: 0, right: 20, left: 0, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="account_month" />
         <YAxis />
@@ -14,6 +25,6 @@ export default function ChartByCategory(props) {
         <Brush className="TimeLineChart-brush" dataKey="account_month" />
         <Line dataKey="amount" fill="#8884d8" name="金額" />
       </LineChart>
-    </div>
+    </ResponsiveContainer>
   );
 }

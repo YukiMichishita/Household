@@ -15,65 +15,57 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles({
   tableBackground: {
-    position: 'absolute',
-    width: 800,
-    top: 250,
-    left: 95,
-    maxHeight: 940,
+    margin: '0 auto',
+    width: '90%',
+    maxHeight: '100%',
     overflow: 'scroll',
   },
   table: {
+    margin: '0',
     width: '100%',
-    position: 'relative',
+    height: '100%',
     overflow: 'scroll',
   },
-  row: {
-    width: '100%',
+  tableBody: {
+    height: '100%',
   },
-  tableCell: {
-    fontSize: 25,
-  },
-  tableCellDate: {
-    fontSize: 25,
-    textDecoration: 'underline',
-  },
+  tableCell: { fontSize: '1.5rem' },
   head: {
     backgroundColor: 'black',
     color: 'white',
-    fontSize: 40,
+    margin: 0,
+    fontSize: '1.3rem',
+    width: '100%',
   },
-  category: {
-    fontSize: 40,
-  },
-  chartIcon: {
+  categoryCell: {
+    fontSize: '1rem',
+    display: 'flex',
     position: 'relative',
-    left: 20,
+    height: '100%',
+    width: '80%',
+    padding: '0',
+    margin: 0,
+    whiteSpace: 'nowrap',
   },
-  body: {
-    fontSize: 40,
-  },
-  selectMonthText: {
-    position: 'relative',
-    width: 200,
-    fontSize: 50,
-    height: 50,
-    top: 150,
-    left: 650,
-    boxSizing: 'border-box',
-    category: {
-      fontSize: 40,
-      textDecoration: 'underline',
-    },
-  },
-
-  addCircleIcon: { position: 'relative', fontSize: 80, top: 1200, left: 750 },
+  IconButtonDiv: { width: '15%', margin: 0 },
+  categoryNameDiv: { flex: '1 0 0', position: 'relative' },
+  categoryName: { position: 'relative', top: '5%' },
+  chartIconDiv: { position: 'relative', flex: '1 0 auto' },
+  chartIcon: { position: 'absolute', margin: 'auto 0', top: 0, bottom: 0 },
+  amountCell: { fontSize: '1rem', width: '20%' },
+  detailRow: {},
+  detailCell: {},
 });
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    '&:nth-of-type(odd)': {
+    '&:nth-of-type(n)': {
       backgroundColor: theme.palette.action.hover,
     },
+    '& > *': {
+      borderBottom: 'unset',
+    },
+    width: '100%',
   },
 }))(TableRow);
 
@@ -84,41 +76,45 @@ function Row(props) {
 
   return (
     <React.Fragment>
+      {/* カテゴリ毎の金額 */}
       <StyledTableRow className={classes.row}>
-        <TableCell component="th" scope="row" className={classes.category}>
-          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          </IconButton>
-          {row.category_name}
-          <BarChartIcon
-            fontSize="large"
-            className={classes.chartIcon}
-            onClick={() => props.handleLink('chartByCategory', { category: row.category })}
-          />
+        <TableCell component="th" scope="row" className={classes.categoryCell}>
+          <div className={classes.IconButtonDiv}>
+            <p>
+              <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+                {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+              </IconButton>
+            </p>
+          </div>
+          <div className={classes.categoryNameDiv}>
+            <p className={classes.categoryName}>{row.category_name}</p>
+          </div>
+          <div className={classes.chartIconDiv}>
+            <BarChartIcon
+              fontSize="large"
+              className={classes.chartIcon}
+              onClick={() => props.handleLink('chartByCategory', { category: row.category })}
+            />
+          </div>
         </TableCell>
-
-        <TableCell align="right" className={classes.body}>
+        <TableCell align="right" className={classes.amountCell}>
           {'¥' + row.amount.toLocaleString()}
         </TableCell>
       </StyledTableRow>
 
-      <TableRow className={classes.row}>
+      {/* テーブルをクリックした際にドロップダウンする明細 */}
+      <TableRow className={classes.detailRow}>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box margin={1}>
-              <Table size="small" aria-label="purchases">
+              <Table size="small">
                 <TableBody>
                   {row.detail.map((detail) => (
-                    <TableRow key={detail.id}>
-                      <TableCell
-                        component="th"
-                        scope="row"
-                        className={classes.tableCellDate}
-                        onClick={() => props.handleLink('updateExpences', { id: detail.id })}
-                      >
+                    <TableRow key={detail.id} onClick={() => props.handleLink('updateExpences', { id: detail.id })}>
+                      <TableCell component="th" className={classes.tableCellDate}>
                         {detail.account_date}
                       </TableCell>
-                      <TableCell align="right" className={classes.tableCell}>
+                      <TableCell align="right" className={classes.detailCell}>
                         {'¥' + detail.amount.toLocaleString()}
                       </TableCell>
                     </TableRow>
@@ -138,15 +134,7 @@ export default function PerMonthTable(props) {
   return (
     <Paper className={classes.tableBackground} elevation={3}>
       <Table stickyHeader className={classes.table} aria-label="customized table">
-        <TableHead>
-          <StyledTableRow>
-            <TableCell className={classes.head}>カテゴリ</TableCell>
-            <TableCell className={classes.head} align="right">
-              金額
-            </TableCell>
-          </StyledTableRow>
-        </TableHead>
-        <TableBody>
+        <TableBody className={classes.tableBody}>
           {props.rows.map((row) => (
             <Row key={row.category} row={row} handleLink={props.handleLink} classes={classes} />
           ))}

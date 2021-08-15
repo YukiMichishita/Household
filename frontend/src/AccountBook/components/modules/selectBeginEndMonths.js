@@ -10,7 +10,7 @@ export default function SelectBeginEndMonth(props) {
   const dispatch = useDispatch();
 
   return (
-    <div className={props.classes.selectMonths}>
+    <React.Fragment>
       <TextField
         label={'From'}
         type="month"
@@ -38,6 +38,6 @@ export default function SelectBeginEndMonth(props) {
           </MenuItem>
         ))}
       </Select>
-    </div>
+    </React.Fragment>
   );
 }

@@ -3,148 +3,78 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   form: {
-    position: 'relative',
-    top: 50,
-    bottom: 50,
-    left: 250,
+    margin: '13% 0 0 0',
+    '& > p': {
+      margin: '0 auto 7% auto',
+      textAlign: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      position: 'relative',
+    },
   },
-  accountDate: {
-    position: 'relative',
-    minWidth: 120,
-    top: 50,
-    bottom: 50,
-    left: 100,
+  // 会計日
+  selectMonthParagraph: {
+    alignItems: 'flex-center',
   },
-  switchIcon: { position: 'relative', top: 20, bottom: 40, left: 300, fontSize: 30 },
-  beginMonth: { position: 'relative', display: 'block' },
-  endMonth: { position: 'relative', display: 'block', top: 10 },
-  multiMonthsDate: { position: 'relative', maxWidth: 50, top: 30, left: 120 },
-  selectMonths: { position: 'relative', top: 70, left: 100 },
-  selectMonth: { position: 'relative' },
-  amount: {
-    minWidth: 120,
+  switchIcon: { margin: '5% 0' },
+  selectMonth: {
+    width: '40%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-end',
+    margin: '0 3% 0 0',
     position: 'relative',
-    top: 220,
-    left: 100,
+    right: '0',
+    '& > div': { margin: '3% 0 0 3%' },
   },
-  comment: {
-    minWidth: 120,
-    position: 'relative',
-    top: 280,
-    left: -70,
-  },
-  save: {
-    position: 'relative',
-    top: 410,
-    left: -200,
-  },
-  delete: {
-    position: 'relative',
-    top: 470,
-    left: -265,
-    backgroundColor: '#FF6666',
+  accountDate: { width: '100%' },
+  beginMonth: { width: '100%' },
+  endMonth: { width: '100%' },
+  multiMonthsDate: { width: '50%' },
+  // カテゴリ・サブカテゴリ
+  categoryParagraph: {
+    alignItems: 'flex-end',
   },
   categoryForm: {
-    minWidth: 120,
-    position: 'relative',
-    top: 80,
-    left: 140,
+    minWidth: '35%',
+    margin: '0 5%',
   },
+  subcategoryParagraph: { alignItems: 'flex-end' },
   subcategoryForm: {
-    minWidth: 120,
-    position: 'relative',
-    top: 80,
-    left: 140,
+    minWidth: '35%',
+    margin: '0 5%',
     whiteSpace: 'nowrap',
   },
+  // 金額・コメント
+  amount: {
+    minWidth: '40%',
+  },
+  comment: {
+    minWidth: '60%',
+  },
+  //保存・削除ボタン
+  buttons: { display: 'flex', flexWrap: 'wrap', width: 0, '& > button': { margin: '10px 0' } },
+  delete: {
+    backgroundColor: '#FF6666',
+  },
+  // 　ダイアログ
+  addCategoryDialog: { width: '60%', position: 'relative' },
+  addCategoryIcon: { margin: '0' },
   dialogHeader: {
     display: 'flex',
     backgroundColor: 'black',
   },
-  dialogLabel: {
-    width: '50%',
-  },
-  dialogAction: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-  },
-  tabPanel: {
-    width: 400,
-    height: 200,
-  },
-  addCategoryIcon: {
-    position: 'relative',
-    top: 40,
-    left: 280,
-  },
-  addCategoryDialog: {
-    position: 'relative',
-    bottom: 700,
-    left: -150,
-  },
-  categoryName: {
-    potition: 'relative',
-    left: 95,
-  },
+  dialogLabel: { width: '50%' },
+  dialogAction: {},
+  tabPanel: {},
+  categoryName: {},
   editDialogContent: {
-    position: 'relative',
-    height: '100%',
-    width: '100%',
-    left: 50,
-  },
-  editIcon1: {
-    position: 'relative',
-    fontSize: 40,
-    top: 10,
-    left: 130,
-  },
-  deleteIcon1: {
-    position: 'relative',
-    fontSize: 40,
-    top: 10,
-    left: 130,
-  },
-  editIcon2: {
-    position: 'relative',
-    fontSize: 40,
-    top: 10,
-    left: 110,
-  },
-  deleteIcon2: {
-    position: 'relative',
-    fontSize: 40,
-    top: 10,
-    left: 110,
-  },
-  dialogCategory: {
-    potition: 'relative',
-    minWidth: 120,
-    left: 70,
-  },
-  dialogCategory2: {
-    potition: 'relative',
-    minWidth: 120,
-    left: 110,
-  },
-  dialogCategoryEdit: {
-    potition: 'relative',
-    minWidth: 120,
-    left: 60,
-  },
-  dialogSubcategory: {
-    potition: 'relative',
-    minWidth: 120,
-    left: 60,
-  },
-
-  selectMonthText: {
-    width: 200,
-    fontSize: 50,
-    height: 50,
-    top: 90,
-    left: 650,
-    boxSizing: 'border-box',
+    whiteSpace: 'nowrap',
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    '& > div': { margin: '0 auto' },
+    '&>svg': { margin: '0 3%' },
   },
 }));
 

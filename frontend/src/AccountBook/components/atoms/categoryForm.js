@@ -9,18 +9,16 @@ export default function CategoryForm({ id, classes, value, categories, setCatego
     return <React.Fragment />;
   }
   return (
-    <div>
-      <FormControl className={classes.categoryForm}>
-        <InputLabel htmlFor="category-select">カテゴリ</InputLabel>
-        <Select id={id} onChange={(e) => setCategory(e.target.value)} value={value}>
-          <MenuItem value={''}>{''}</MenuItem>
-          {categories.items.map((category) => (
-            <MenuItem key={category.id} value={category.id}>
-              {category.name}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
-    </div>
+    <FormControl className={classes.categoryForm}>
+      <InputLabel htmlFor="category-select">カテゴリ</InputLabel>
+      <Select id={id} onChange={(e) => setCategory(e.target.value)} value={value}>
+        <MenuItem value={''}>{''}</MenuItem>
+        {categories.items.map((category) => (
+          <MenuItem key={category.id} value={category.id}>
+            {category.name}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 }

@@ -29,27 +29,25 @@ export default function SwitchBar(props) {
   }, [mode]);
 
   return (
-    <div>
-      <AppBar position="fixed" className={classes.switchBar}>
-        <Paper
-          className={classes.incomeButton}
-          onClick={() => {
-            dispatch(switchIncome());
-          }}
-          elevation={3}
-        >
-          <img className={classes.incomeIcon} src={incomeIcon} />
-        </Paper>
-        <Paper
-          className={classes.spendingButton}
-          onClick={() => {
-            dispatch(switchSpending());
-          }}
-          elevation={3}
-        >
-          <img className={classes.spendingIcon} src={spendingIcon} />
-        </Paper>
-      </AppBar>
-    </div>
+    <AppBar position="fixed" className={classes.switchBar} elevation={24}>
+      <Paper
+        className={classes.incomeButton}
+        onClick={() => {
+          dispatch(switchIncome());
+        }}
+        elevation={0}
+      >
+        <img className={classes.incomeIcon} src={incomeIcon} />
+      </Paper>
+      <Paper
+        className={classes.spendingButton}
+        onClick={() => {
+          dispatch(switchSpending());
+        }}
+        elevation={0}
+      >
+        <img className={classes.spendingIcon} src={spendingIcon} />
+      </Paper>
+    </AppBar>
   );
 }

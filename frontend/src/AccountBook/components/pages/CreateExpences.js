@@ -16,25 +16,41 @@ export default function CreateExpences({ classes, loading, disabled, multiMonth,
     return <div>loading...</div>;
   }
   return (
-    <div>
+    <React.Fragment>
       <MessagePopover />
       <form noValidate className={classes.form}>
-        <div>
+        {/* 会計月選択 */}
+        <p className={classes.selectMonthParagraph}>
           <div className={classes.selectMonth}>
             {multiMonth ? <SelectBeginEndMonth classes={classes} /> : <AccountDateForm classes={classes} />}
           </div>
           <CachedIcon className={classes.switchIcon} onClick={switchMonth} />
-        </div>
-        <CategoryForm classes={classes} />
-        <AddCategoryDialog classes={classes} />
-        <SubcategoryForm classes={classes} />
-        <AddSubcategoryDialog classes={classes} />
-        <AmountForm classes={classes} />
-        <CommentForm classes={classes} />
-        <Button variant="outlined" disabled={disabled} onClick={postExpences} className={classes.save}>
-          保存
-        </Button>
+        </p>
+        {/* カテゴリ選択 */}
+        <p className={classes.categoryParagraph}>
+          <CategoryForm classes={classes} />
+          <AddCategoryDialog classes={classes} />
+        </p>
+        {/* サブカテゴリ選択 */}
+        <p className={classes.subcategoryParagraph}>
+          <SubcategoryForm classes={classes} />
+          <AddSubcategoryDialog classes={classes} />
+        </p>
+        {/* 金額 */}
+        <p>
+          <AmountForm classes={classes} />
+        </p>
+        {/* コメント */}
+        <p>
+          <CommentForm classes={classes} />
+        </p>
+        {/* 保存ボタン */}
+        <p>
+          <Button variant="outlined" disabled={disabled} onClick={postExpences} className={classes.save}>
+            保存
+          </Button>
+        </p>
       </form>
-    </div>
+    </React.Fragment>
   );
 }

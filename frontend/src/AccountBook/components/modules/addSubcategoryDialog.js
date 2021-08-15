@@ -30,22 +30,11 @@ export default function AddSubcategoryDialog({
   deleteSubcategory,
 }) {
   return (
-    <div>
+    <React.Fragment>
       <Fab size="small" aria-label="add" className={classes.addCategoryIcon} onClick={() => setOpen(true)}>
         <AddIcon />
       </Fab>
-      <Dialog
-        PaperProps={{
-          style: {
-            position: 'relative',
-            bottom: 700,
-            left: -150,
-          },
-        }}
-        open={open}
-        onClose={() => setOpen(false)}
-        aria-labelledby="form-dialog-title"
-      >
+      <Dialog open={open} onClose={() => setOpen(false)} aria-labelledby="form-dialog-title" fullWidth>
         <MessagePopover />
         <AppBar position="static" color="default">
           <Tabs value={value} onChange={() => setValue(1 - value)} indicatorColor="primary">
@@ -53,16 +42,18 @@ export default function AddSubcategoryDialog({
             <Tab label="編集" className={classes.dialogLabel} />
           </Tabs>
         </AppBar>
+
+        {/* サブカテゴリ追加タブ */}
         <TabPanel value={value} index={0} className={classes.tabPanel}>
-          <DialogContent>
-            <CategoryForm id={'dialogCategory'} classes={classes.dialogCategory2} />
+          <DialogContent className={classes.editDialogContent}>
+            <CategoryForm id={'dialogCategory'} classes={classes} />
             <TextField
-              autoFocus
               margin="dense"
               id="subcategory_name"
               label="サブカテゴリ名称"
               type="text"
               className={classes.categoryName}
+              inputProps={{ maxLength: 12 }}
             />
           </DialogContent>
           <DialogActions className={classes.dialogAction}>
@@ -74,8 +65,11 @@ export default function AddSubcategoryDialog({
             </Button>
           </DialogActions>
         </TabPanel>
+
+        {/* サブカテゴリ編集・削除タブ */}
         <TabPanel value={value} index={1} className={classes.tabPanel}>
           {editing ? (
+            // 編集・削除
             <DialogContent className={classes.editDialogContent}>
               <TextField
                 id="dialogSubcategoryInput"
@@ -88,9 +82,10 @@ export default function AddSubcategoryDialog({
               <CloseIcon onClick={() => setEditing(false)} />
             </DialogContent>
           ) : (
+            // 対象の選択
             <DialogContent className={classes.editDialogContent}>
-              <CategoryForm id={'dialogCategory'} classes={classes.dialogCategoryEdit} />
-              <SubcategoryForm id={'dialogSubcategory'} classes={classes.dialogSubcategory} />
+              <CategoryForm id={'dialogCategory'} classes={classes} />
+              <SubcategoryForm id={'dialogSubcategory'} classes={classes} />
               <EditIcon className={classes.editIcon2} onClick={() => setEditing(true)} />
               <DeleteForeverIcon className={classes.deleteIcon2} onClick={deleteSubcategory} />
             </DialogContent>
@@ -102,6 +97,6 @@ export default function AddSubcategoryDialog({
           </DialogActions>
         </TabPanel>
       </Dialog>
-    </div>
+    </React.Fragment>
   );
 }

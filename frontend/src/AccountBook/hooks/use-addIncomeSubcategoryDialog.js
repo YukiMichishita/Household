@@ -18,6 +18,10 @@ const useAddIncomeSubcategoryDialog = () => {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
 
   const register = async (registerFunction, name) => {
+    if (name.length <= 0) {
+      window.alert('名前を入力してください');
+      return;
+    }
     if (subcategoryNames.includes(name)) {
       window.alert('既に存在するカテゴリ名です');
       return;

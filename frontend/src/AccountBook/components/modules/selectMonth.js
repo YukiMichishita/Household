@@ -4,15 +4,13 @@ import TextField from '@material-ui/core/TextField';
 
 export default function SelectMonth(props) {
   return (
-    <form className={props.classes.selectMonth}>
-      <TextField
-        id={props.id}
-        label={props.label}
-        type="month"
-        className={props.classes.selectMonthText}
-        onChange={(e) => props.setValue(e.target.value)}
-        defaultValue={props.defaultValue}
-      />
-    </form>
+    <TextField
+      id={props.id}
+      label={props.label}
+      type="month"
+      className={props.classes.selectMonthText}
+      onChange={(e) => props.setValue(e.target.value)}
+      defaultValue={props.defaultValue}
+    />
   );
 }
