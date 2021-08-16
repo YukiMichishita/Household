@@ -8,12 +8,15 @@ export const useStyles = makeStyles({
     padding: '0',
     backgroundColor: 'black',
     width: '100%',
-    height: '7%',
+    // height: '7%',
   },
+
+  toolBar: { height: '100%' },
 
   menuButton: {
     margin: '0 0 0 auto',
-    height: '70%',
+    position: 'relative',
+    height: '90%',
     width: '10%',
     color: 'white',
   },
@@ -21,8 +24,9 @@ export const useStyles = makeStyles({
   authButton: {
     margin: '0 0 0 0',
     backgroundColor: 'black',
+    position: 'relative',
     color: 'white',
-    height: '40%',
+    height: '90%',
     width: '10%',
   },
 });

@@ -21,8 +21,8 @@ export const useStyles = makeStyles({
     textAlign: 'center',
   },
   incomeIcon: {
-    height: 'auto',
-    width: '24%',
+    height: '90%',
+    width: 'auto%',
     margin: 'auto',
   },
   spendingButton: {
@@ -32,8 +32,8 @@ export const useStyles = makeStyles({
     textAlign: 'center',
   },
   spendingIcon: {
-    height: 'auto',
-    width: '27%',
+    height: '90%',
+    width: 'auto',
     margin: 'auto auto',
   },
 });

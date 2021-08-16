@@ -5,9 +5,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 export default function CategoryForm({ id, classes, value, categories, setCategory }) {
-  if (categories.loading) {
-    return <React.Fragment />;
-  }
   return (
     <FormControl className={classes.categoryForm}>
       <InputLabel htmlFor="category-select">カテゴリ</InputLabel>

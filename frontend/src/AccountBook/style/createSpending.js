@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   form: {
-    margin: '13% 0 0 0',
+    margin: '7% 0 0 0',
     '& > p': {
       margin: '0 auto 7% auto',
       textAlign: 'center',

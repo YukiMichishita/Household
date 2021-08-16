@@ -1,6 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './App';
+import { Auth0Provider } from '@auth0/auth0-react';
+import { issuer, clientId } from './AccountBook/common/constant';
 
 render(
   <React.Fragment>
@@ -11,4 +13,15 @@ render(
   </React.Fragment>,
   document.querySelector('head'),
 );
-render(<App />, document.querySelector('#content'));
+render(
+  <Auth0Provider
+    domain={issuer}
+    clientId={clientId}
+    redirectUri={window.location.origin + '/expencesPerMonth'}
+    useRefreshTokens={true}
+    cacheLocation="localstorage"
+  >
+    <App />
+  </Auth0Provider>,
+  document.querySelector('#content'),
+);

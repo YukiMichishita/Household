@@ -16,9 +16,9 @@ export default function ButtonAppBar(props) {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <AppBar position="fixed" className={classes.AppBar}>
-        <Toolbar>
+        <Toolbar className={classes.toolBar}>
           <AuthButton classes={classes} />
           <HomeIcon
             className={classes.menuButton}
@@ -28,6 +28,6 @@ export default function ButtonAppBar(props) {
           />
         </Toolbar>
       </AppBar>
-    </div>
+    </React.Fragment>
   );
 }

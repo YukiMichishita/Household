@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   form: {
-    margin: '13% 0 0 0',
+    margin: '7% 0 0 0',
     '& > p': {
       margin: '0 auto 7% auto',
       textAlign: 'center',
@@ -52,7 +52,11 @@ const useStyles = makeStyles((theme) => ({
   comment: {
     minWidth: '60%',
   },
-
+  //保存・削除ボタン
+  buttons: { display: 'flex', flexWrap: 'wrap', width: 0, '& > button': { margin: '10px 0' } },
+  delete: {
+    backgroundColor: '#FF6666',
+  },
   // 　ダイアログ
   addCategoryDialog: { width: '60%', position: 'relative' },
   addCategoryIcon: { margin: '0' },

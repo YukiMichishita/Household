@@ -5,10 +5,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 export default function SubcategoryForm({ id, classes, value, subcategories, setSubcategory }) {
-  if (subcategories.loading) {
-    return <React.Fragment />;
-  }
-
   return (
     <FormControl className={classes.subcategoryForm}>
       <InputLabel htmlFor="subcategory-select">サブカテゴリ</InputLabel>

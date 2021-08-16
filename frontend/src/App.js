@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 import { makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ExpencesPerMonth from './AccountBook/container/pages/ExpencesPerMonth';
@@ -32,35 +33,55 @@ function MyThemeProvider({ children }) {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
 
+async function redirectToLogin() {
+  const { loginWithRedirect } = useAuth0();
+  await loginWithRedirect({
+    appState: {
+      path: window.location.pathname,
+    },
+  });
+}
+
 function App() {
   const style = makeStyles({
-    root: { width: '100%', height: '86%', margin: '0', padding: '0', position: 'absolute', top: '7%' },
+    root: {
+      width: '100%',
+      height: '86%',
+      margin: '0',
+      padding: '0',
+      position: 'absolute',
+      top: '7%',
+      overflow: 'scroll',
+    },
   })();
+  const { isAuthenticated, isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <>Loading...</>;
+  }
+  if (!isAuthenticated) {
+    console.log('render b');
+    redirectToLogin();
+    return <></>;
+  }
+
   return (
     <React.Fragment>
       <MyThemeProvider>
-        <Auth0Provider
-          domain={issuer}
-          clientId={clientId}
-          redirectUri={window.location.origin}
-          useRefreshTokens={true}
-          cacheLocation="localstorage"
-        >
-          <Provider store={store}>
-            <Router>
-              <ButtonAppBar />
-              <Paper className={style.root} square elevation={0}>
-                <Switch>
-                  <Route path="/expencesPerMonth" exact component={ExpencesPerMonth} />
-                  <Route path="/createExpences" exact component={CreateExpences} />
-                  <Route path="/updateExpences" exact component={UpdateExpences} />
-                  <Route path="/chartByCategory" exact component={SpendingChartByCategory} />
-                </Switch>
-              </Paper>
-              <SwitchBar />
-            </Router>
-          </Provider>
-        </Auth0Provider>
+        <Provider store={store}>
+          <Router>
+            <ButtonAppBar />
+            <Paper className={style.root} square elevation={0}>
+              <Switch>
+                <Route path="/expencesPerMonth" exact component={ExpencesPerMonth} />
+                <Route path="/createExpences" exact component={CreateExpences} />
+                <Route path="/updateExpences" exact component={UpdateExpences} />
+                <Route path="/chartByCategory" exact component={SpendingChartByCategory} />
+              </Switch>
+            </Paper>
+            <SwitchBar />
+          </Router>
+        </Provider>
       </MyThemeProvider>
     </React.Fragment>
   );
