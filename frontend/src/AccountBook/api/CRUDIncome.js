@@ -27,8 +27,8 @@ export const createIncome = async (body, getAccessToken) => {
   return await accountBookFetch(incomeURL, body, getAccessToken, 'POST');
 };
 export const updateIncome = async (body, getAccessToken) => {
-  return await accountBookFetch(incomeURL + body.id, body, getAccessToken, 'PUT');
+  return await accountBookFetch(incomeURL + body.id + '/', body, getAccessToken, 'PUT');
 };
 export const deleteIncome = async (id, getAccessToken) => {
-  return await accountBookFetch(incomeURL + id, id, getAccessToken, 'DELETE');
+  return await accountBookFetch(incomeURL + id + '/', id, getAccessToken, 'DELETE');
 };

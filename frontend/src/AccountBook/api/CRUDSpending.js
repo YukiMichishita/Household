@@ -32,8 +32,8 @@ export const createSpending = async (body, getAccessToken) => {
   return await accountBookFetch(spendingURL, body, getAccessToken, 'POST');
 };
 export const updateSpending = async (body, getAccessToken) => {
-  return await accountBookFetch(spendingURL + body.id, body, getAccessToken, 'PUT');
+  return await accountBookFetch(spendingURL + body.id + '/', body, getAccessToken, 'PUT');
 };
 export const deleteSpending = async (id, getAccessToken) => {
-  return await accountBookFetch(spendingURL + id, id, getAccessToken, 'DELETE');
+  return await accountBookFetch(spendingURL + id + '/', id, getAccessToken, 'DELETE');
 };

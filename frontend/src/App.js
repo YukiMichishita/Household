@@ -66,7 +66,7 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <>
       <MyThemeProvider>
         <Provider store={store}>
           <Router>
@@ -83,7 +83,7 @@ function App() {
           </Router>
         </Provider>
       </MyThemeProvider>
-    </React.Fragment>
+    </>
   );
 }
 

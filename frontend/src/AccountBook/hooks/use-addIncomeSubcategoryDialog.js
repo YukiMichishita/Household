@@ -42,7 +42,7 @@ const useAddIncomeSubcategoryDialog = () => {
   };
 
   const del = async () => {
-    if (Object.keys(await getIncomeBySubcategory(user, income.subcategory, getAccessTokenSilently)).length > 0) {
+    if (Object.keys(await getIncomeBySubcategory(user.id, income.subcategory, getAccessTokenSilently)).length > 0) {
       window.alert('このサブカテゴリで入力されたデータがあるため削除できません');
       return;
     }

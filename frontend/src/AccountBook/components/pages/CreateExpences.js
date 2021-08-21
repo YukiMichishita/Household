@@ -16,14 +16,14 @@ export default function CreateExpences({ classes, loading, disabled, multiMonth,
     return <div>loading...</div>;
   }
   return (
-    <React.Fragment>
+    <>
       <MessagePopover />
       <form noValidate className={classes.form}>
         {/* 会計月選択 */}
         <p className={classes.selectMonthParagraph}>
-          <div className={classes.selectMonth}>
+          <span className={classes.selectMonth}>
             {multiMonth ? <SelectBeginEndMonth classes={classes} /> : <AccountDateForm classes={classes} />}
-          </div>
+          </span>
           <CachedIcon className={classes.switchIcon} onClick={switchMonth} />
         </p>
         {/* カテゴリ選択 */}
@@ -51,6 +51,6 @@ export default function CreateExpences({ classes, loading, disabled, multiMonth,
           </Button>
         </p>
       </form>
-    </React.Fragment>
+    </>
   );
 }

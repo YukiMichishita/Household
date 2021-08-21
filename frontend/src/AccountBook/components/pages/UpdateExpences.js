@@ -14,7 +14,7 @@ export default function UpdateExpences({ expences, classes, disabled, postExpenc
     return <div>loading...</div>;
   }
   return (
-    <React.Fragment>
+    <>
       <MessagePopover />
       <form noValidate className={classes.form}>
         {/* 会計月選択 */}
@@ -51,6 +51,6 @@ export default function UpdateExpences({ expences, classes, disabled, postExpenc
           </Button>
         </p>
       </form>
-    </React.Fragment>
+    </>
   );
 }

@@ -75,7 +75,7 @@ function Row(props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <React.Fragment>
+    <>
       {/* カテゴリ毎の金額 */}
       <StyledTableRow className={classes.row}>
         <TableCell component="th" scope="row" className={classes.categoryCell}>
@@ -125,7 +125,7 @@ function Row(props) {
           </Collapse>
         </TableCell>
       </TableRow>
-    </React.Fragment>
+    </>
   );
 }
 

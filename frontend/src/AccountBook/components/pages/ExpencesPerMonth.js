@@ -6,7 +6,6 @@ import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles({
   nodata: { textAlign: 'center', top: '40%', position: 'relative' },
-
   selectMonthArea: {
     width: '100%',
     height: '15%',
@@ -15,13 +14,22 @@ export const useStyles = makeStyles({
     position: 'absolute',
     textAlign: 'center',
   },
-  tableArea: {
+  sumArea: {
     width: '100%',
-    height: '75%',
+    height: '4%',
     margin: '0',
     padding: '0',
     position: 'absolute',
     top: '15%',
+  },
+  sum: { padding: '0', margin: '0', right: '10%', position: 'absolute', fontSize: '0.9rem' },
+  tableArea: {
+    width: '100%',
+    height: '70%',
+    margin: '0',
+    padding: '0',
+    position: 'absolute',
+    top: '20%',
   },
   addCircleIconArea: {
     width: '100%',
@@ -42,7 +50,7 @@ export default function ExpencesPerMonth({ classes, expences, yearMonth, setYear
   }
 
   return (
-    <React.Fragment>
+    <>
       <div className={classes.selectMonthArea}>
         <SelectMonth
           id={'AccountYearMonth'}
@@ -53,9 +61,16 @@ export default function ExpencesPerMonth({ classes, expences, yearMonth, setYear
         />
       </div>
       {expences.length > 0 ? (
-        <div className={classes.tableArea}>
-          <PerMonthTable rows={expences} classes={classes} handleLink={handleLink} />
-        </div>
+        <>
+          <div className={classes.sumArea}>
+            <p className={classes.sum}>
+              {'合計: ¥' + expences.reduce((sum, element) => sum + element.amount, 0).toLocaleString()}
+            </p>
+          </div>
+          <div className={classes.tableArea}>
+            <PerMonthTable rows={expences} classes={classes} handleLink={handleLink} />
+          </div>
+        </>
       ) : (
         <p className={classes.nodata}>データがありません</p>
       )}
@@ -67,6 +82,6 @@ export default function ExpencesPerMonth({ classes, expences, yearMonth, setYear
           }}
         />
       </div>
-    </React.Fragment>
+    </>
   );
 }

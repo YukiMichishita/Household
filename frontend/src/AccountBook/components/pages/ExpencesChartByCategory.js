@@ -4,7 +4,7 @@ import CategoryMultiSelect from '../atoms/categoryMultiSelect';
 
 export default function ExpencesChartByCategory({ classes, data }) {
   return (
-    <React.Fragment>
+    <>
       <CategoryMultiSelect classes={classes} />
       <ChartByCategory
         datas={data}
@@ -14,6 +14,6 @@ export default function ExpencesChartByCategory({ classes, data }) {
         }}
         classes={classes}
       />
-    </React.Fragment>
+    </>
   );
 }

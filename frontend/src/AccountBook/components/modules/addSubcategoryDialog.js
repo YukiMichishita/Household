@@ -30,7 +30,7 @@ export default function AddSubcategoryDialog({
   deleteSubcategory,
 }) {
   return (
-    <React.Fragment>
+    <>
       <Fab size="small" aria-label="add" className={classes.addCategoryIcon} onClick={() => setOpen(true)}>
         <AddIcon />
       </Fab>
@@ -97,6 +97,6 @@ export default function AddSubcategoryDialog({
           </DialogActions>
         </TabPanel>
       </Dialog>
-    </React.Fragment>
+    </>
   );
 }

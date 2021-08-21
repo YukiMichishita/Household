@@ -14,7 +14,7 @@ export const updateSpendingCategory = async (body, getAccessToken) => {
   return await accountBookFetch(spendingCategoryURL + body.id + '/', body, getAccessToken, 'PUT');
 };
 export const deleteSpendingCategory = async (id, getAccessToken) => {
-  return await accountBookFetch(spendingCategoryURL + id, null, getAccessToken, 'DELETE');
+  return await accountBookFetch(spendingCategoryURL + id + '/', null, getAccessToken, 'DELETE');
 };
 
 //サブカテゴリ
@@ -33,5 +33,5 @@ export const updateSpendingSubcategory = async (body, getAccessToken) => {
   return await accountBookFetch(spendingSubcategoryURL + body.id + '/', body, getAccessToken, 'PUT');
 };
 export const deleteSpendingSubcategory = async (id, getAccessToken) => {
-  return await accountBookFetch(spendingSubcategoryURL + id, null, getAccessToken, 'DELETE');
+  return await accountBookFetch(spendingSubcategoryURL + id + '/', null, getAccessToken, 'DELETE');
 };

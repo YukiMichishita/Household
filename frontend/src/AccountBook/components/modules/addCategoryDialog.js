@@ -29,7 +29,7 @@ export default function AddCategoryDialog({
   deleteCategory,
 }) {
   return (
-    <React.Fragment>
+    <>
       <Fab size="small" aria-label="add" className={classes.addCategoryIcon} onClick={() => setOpen(true)}>
         <AddIcon />
       </Fab>
@@ -94,6 +94,6 @@ export default function AddCategoryDialog({
           </DialogActions>
         </TabPanel>
       </Dialog>
-    </React.Fragment>
+    </>
   );
 }

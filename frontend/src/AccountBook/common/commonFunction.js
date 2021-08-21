@@ -36,13 +36,11 @@ export const accountBookFetch = async (url, body, getAccessToken, method) => {
     method,
     headers,
   };
-  if (method != 'GET') {
+  if (method !== 'GET') {
     request.body = JSON.stringify(body);
-    console.log(request);
   }
-
   const res = await fetch(rootAPIUrl + url, request);
-  if (res) {
+  if (res && method !== 'DELETE') {
     return toJson(res);
   }
 };

@@ -5,12 +5,12 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import { issuer, clientId } from './AccountBook/common/constant';
 
 render(
-  <React.Fragment>
+  <>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
     />
-  </React.Fragment>,
+  </>,
   document.querySelector('head'),
 );
 render(

@@ -31,15 +31,6 @@ export default function SwitchBar(props) {
   return (
     <AppBar position="fixed" className={classes.switchBar} elevation={24}>
       <Paper
-        className={classes.incomeButton}
-        onClick={() => {
-          dispatch(switchIncome());
-        }}
-        elevation={0}
-      >
-        <img className={classes.incomeIcon} src={incomeIcon} />
-      </Paper>
-      <Paper
         className={classes.spendingButton}
         onClick={() => {
           dispatch(switchSpending());
@@ -47,6 +38,17 @@ export default function SwitchBar(props) {
         elevation={0}
       >
         <img className={classes.spendingIcon} src={spendingIcon} />
+        支出
+      </Paper>
+      <Paper
+        className={classes.incomeButton}
+        onClick={() => {
+          dispatch(switchIncome());
+        }}
+        elevation={0}
+      >
+        <img className={classes.incomeIcon} src={incomeIcon} />
+        収入
       </Paper>
     </AppBar>
   );

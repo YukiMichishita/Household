@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   noLabel: {
     marginTop: theme.spacing(3),
   },
+  nodata: { textAlign: 'center', top: '2%', position: 'relative' },
 }));
 
 const ITEM_HEIGHT = 48;
@@ -42,10 +43,13 @@ const MenuProps = {
 
 export default function CategoryMultiSelect(props) {
   const classes = useStyles();
-  const categories = useSelector((state) => state.category).items;
+  const categories = useSelector((state) => state.category);
   const selectedCategories = useSelector((state) => state.categoryMultiValues);
   const dispatch = useDispatch();
 
+  if (categories.loading) {
+    return <p className={classes.nodata}>loading...</p>;
+  }
   return (
     <div className={props.classes.category}>
       <FormControl className={classes.formControl}>
@@ -59,14 +63,14 @@ export default function CategoryMultiSelect(props) {
           renderValue={(selected) => (
             <div className={classes.chips}>
               {selected.map((value) => {
-                name = categories.filter((category) => category.id == value)[0]?.name;
+                name = categories.items.filter((category) => category.id == value)[0]?.name;
                 return <Chip key={value} label={name} className={classes.chip} />;
               })}
             </div>
           )}
           MenuProps={MenuProps}
         >
-          {categories.map((category) => (
+          {categories.items.map((category) => (
             <MenuItem key={category.id} value={category.id}>
               <Checkbox checked={selectedCategories.indexOf(category.id) > -1} color="secondary" />
               <ListItemText primary={category.name} />

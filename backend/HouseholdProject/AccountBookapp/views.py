@@ -130,9 +130,22 @@ class IncomeSubCategoryViewSet(viewsets.ModelViewSet):
     filterset_fields = ['user', 'category']
 
 
+class IncomeFilter(filters.FilterSet):
+    id = filters.UUIDFilter(field_name='id')
+    user = filters.CharFilter(field_name='user')
+    account_year = filters.NumberFilter(
+        field_name='account_date', lookup_expr='year')
+    account_month = filters.NumberFilter(
+        field_name='account_date', lookup_expr='month')
+    category = filters.CharFilter(field_name='category')
+    subcategory = filters.CharFilter(field_name='subcategory')
+
+
 class IncomeViewSet(viewsets.ModelViewSet):
     queryset = Income.objects.all()
     serializer_class = IncomeSerializer
+    filter_backends = [filters.DjangoFilterBackend]
+    filterset_class = IncomeFilter
 
 
 class IncomePerMonthView(views.APIView):

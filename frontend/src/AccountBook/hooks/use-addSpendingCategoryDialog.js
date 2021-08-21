@@ -38,7 +38,7 @@ const useAddSpendingCategoryDialog = (props) => {
   };
 
   const del = async () => {
-    if (Object.keys(await getSpendingByCategory(user, spending.category, getAccessTokenSilently)).length > 0) {
+    if (Object.keys(await getSpendingByCategory(user.sub, spending.category, getAccessTokenSilently)).length > 0) {
       window.alert('このカテゴリで入力されたデータがあるため削除できません');
       return;
     }

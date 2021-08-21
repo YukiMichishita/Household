@@ -38,7 +38,7 @@ const useAddIncomeCategoryDialog = (props) => {
   };
 
   const del = async () => {
-    if (Object.keys(await getIncomeByCategory(user, income.category, getAccessTokenSilently)).length > 0) {
+    if (Object.keys(await getIncomeByCategory(user.sub, income.category, getAccessTokenSilently)).length > 0) {
       window.alert('このカテゴリで入力されたデータがあるため削除できません');
       return;
     }

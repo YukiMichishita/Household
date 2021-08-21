@@ -14,7 +14,7 @@ export const updateIncomeCategory = async (body, getAccessToken) => {
   return await accountBookFetch(incomeCategoryURL + body.id + '/', body, getAccessToken, 'PUT');
 };
 export const deleteIncomeCategory = async (id, getAccessToken) => {
-  return await accountBookFetch(incomeCategoryURL + id, null, getAccessToken, 'DELETE');
+  return await accountBookFetch(incomeCategoryURL + id + '/', null, getAccessToken, 'DELETE');
 };
 
 //サブカテゴリ
@@ -33,5 +33,5 @@ export const updateIncomeSubcategory = async (body, getAccessToken) => {
   return await accountBookFetch(incomeSubcategoryURL + body.id + '/', body, getAccessToken, 'PUT');
 };
 export const deleteIncomeSubcategory = async (id, getAccessToken) => {
-  return await accountBookFetch(incomeSubcategoryURL + id, null, getAccessToken, 'DELETE');
+  return await accountBookFetch(incomeSubcategoryURL + id + '/', null, getAccessToken, 'DELETE');
 };
