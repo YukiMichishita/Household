@@ -1,5 +1,6 @@
-# Household
+# 家計簿アプリ
 
-#Demo
+<img src="https://j.gifs.com/79pDrA.gif" height=20%>
 
-<img src="https://gifs.com/gif/accountbookapp-79pDrA" width=70%>
+# App URL
+### **https://kakeibo.tk/** 
